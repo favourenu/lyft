@@ -1,0 +1,59 @@
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+.carousel-container{
+  width: 100%;
+  margin: 10rem auto;
+  padding: 10px;
+  /* border: 2px red solid;  */
+}
+
+.slide{
+  /* border: 2px red solid; */
+  width: 25%;
+  padding: 20px;
+  text-align: center;
+  transform: scale(0.9);
+  opacity: 0.7;
+  transition: transform 300ms;
+  font-size: 20px;
+}
+
+.activeSlide{
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.img-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slide .pf-img{
+  width: 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.qoute{
+  font-size: 25px;
+  padding: 10px;
+}
+
+.person-name{
+  display: inline-block;
+  padding: 10px;
+}
+
+.arrow{
+  position: absolute;
+  top: 50%;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.next{
+  right: 0%;
+}

@@ -1,0 +1,13 @@
+.head-two{
+    font-size: 46px;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+
+@media(max-width: 1270px){
+    .head-two{
+        font-size: 30px;
+    }
+}
+

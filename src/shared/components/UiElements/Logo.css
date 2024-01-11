@@ -1,0 +1,16 @@
+.lyft-logo{
+    font-size:75px;
+    color: #ff00bf;
+    /* border: 2px solid red */
+
+}
+
+.lyft-logo:hover{
+    color: #000;
+}
+
+@media(max-width: 610px){
+    .lyft-logo{
+        font-size: 60px;
+    }
+}
