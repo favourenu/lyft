@@ -3,7 +3,7 @@ import Slider from "react-slick"
 
 import "./CardSlider.scss"
 
-const infoSlider =[
+const infoSlider = [
    {
       title: "Wait & save",
       image: "https://images.ctfassets.net/q8mvene1wzq4/7otqt30AWZBqIOvjxSWC4e/0381705809e9e10f905af52008a96d39/ws.svg?w=&q=60&fm=",
@@ -37,11 +37,6 @@ const setting = {
 const CardSlider = ({props}) => {
    return(
       <div className="card-slider-container">
-         <div className="text-headings">
-               <h2 className='head-two'>Ride. Bike. Scoot. Go bananas.</h2>
-               <p>{"We've got options to get you where you're going. Choose a ride* that suits your mood and budget."}</p>
-         </div>
-
          <Slider {...setting}>
             {infoSlider.map((infoslide) =>{
                <div>

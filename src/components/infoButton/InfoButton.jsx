@@ -1,14 +1,13 @@
-import "./InfoButton.scss"
 import CustomButton from "../customButton/customButton";
 
 const InfoButton = ({btnText, paraText, iconClass}) =>{
    return (
-      <div className="info-button">
+      <div className="info-button d-flex align-items-center gap-4">
          <CustomButton isPurpleBtn>{btnText}</CustomButton>
-         <p className=''>
+         <div className='d-flex align-items-center gap-3 fs-5 fw-medium'>
             {paraText}
-            <i className={iconClass}></i>
-         </p>
+            <i className={`${iconClass} mt-1`}></i>
+         </div>
       </div>
    )
 }

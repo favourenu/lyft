@@ -1,10 +1,13 @@
-import "./InfoList.scss"
-
 const InfoList = ({iconClass, h4text, para}) => {
    return(
-      <li className="info-list">
-         <h4> <i className={iconClass}></i> {h4text}</h4>
-         <p>{para}</p>
+      <li className="info-list d-flex gap-3 fs-6">
+         <div>
+            <i className={iconClass}></i> 
+         </div>
+         <div>
+            <span className='fw-semibold'>{h4text}</span>
+            <span>{para}</span>
+         </div>
       </li>
    )
 }

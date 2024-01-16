@@ -5,10 +5,35 @@
   box-sizing: border-box;
 }
 
+body {
+
+   h1, h2, h3, h4, h5, h6, p {
+      margin: 0;
+   }
+
+   ul {
+      margin: 0;
+      padding: 0;
+   }
+   .line {
+      width: 1px;
+      background-color: #D8D8DE;
+      margin: 0;
+   }
+
+   a {
+      color: #000;
+   }
+
+   li {
+      list-style: none;
+   }
+}
+
 @media(max-width: 1024px){
-  body{
-    position: relative;
-    height: 100vh;
-  }
+   body{
+      position: relative;
+      height: 100vh;
+   }
 }
 
