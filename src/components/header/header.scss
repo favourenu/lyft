@@ -1,20 +1,26 @@
 header {
    border-bottom: 1px solid #D8D8DE;
-   padding: 0px 85px;
    height: 80px;
-   
-   .main-nav{
-      padding: 0px 20px;
-      width: 65%;
-   }
 
-   .nav-links{
-     color: #000;
-     text-decoration: none;
+   .header-container {
+      padding: 0px 70px;
+      width: 1440px;
+
+      
+      .main-nav{
+         padding: 0px 20px;
+         width: 65%;
+      }
+   
+      .nav-links{
+        color: #000;
+        text-decoration: none;
+      }
+      
+      .nav-links:hover{
+        color: #523be4;
+      }
    }
    
-   .nav-links:hover{
-     color: #523be4;
-   }
 }
 
