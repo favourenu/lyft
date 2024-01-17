@@ -66,29 +66,41 @@ section {
    padding: 64px 80px;
 
    .section-container {
-      width: 1440px;
-      padding: 0px 100px;
+      width: 1200px;
+      padding: 0px 50px;
+   }
+
+   .hero {
+      width: 40%;
+
+      h1{
+         font-size: 80px;
+      }
+   }
+
+   h2 {
+      font-size: 36px;
+   }
+
+   .subject-terms{
+      font-size: 14px;
+   }  
+
+   .info-text  {
+      font-size: 12px;
+      color: #0C0B31;
    }
    
    &.first-section {
       .first-section-container {
-         width: 1440px;
+         width: 1200px;
       }
 
       .first-section-img {
-         width: 58%;
+         width: 60%;
    
          img {
             height: 400px;
-   
-         }
-      }
-   
-      .hero {
-         width: 40%;
-   
-         h1{
-            font-size: 80px;
          }
       }
    }
@@ -99,13 +111,16 @@ section {
    
       .section-info {
          width: 45%;
-   
-         h2 {
-            font-size: 36px;
-         }
-   
-         
       }
+
+      .rider-image-container {
+         width: 57%;
+
+         img {
+            width: 85%;
+         }
+      }
+
       .image-container{
          width: 47%;
       
@@ -121,24 +136,15 @@ section {
    
       .section-info {
          width: 45%;
-   
-         h2 {
-            font-size: 36px;
-         }
-         
       }
+
       .image-container{
          width: 47%;
       
          img{
             width: 80%;
-            // height: 450px;
          }
-      }
-
-      .subject-terms{
-         font-size: 14px;
-      }     
+      }   
    }
    
    &.fourth-section {
@@ -147,25 +153,16 @@ section {
          
       .section-info {
          width: 45%;
-   
-         h2 {
-            font-size: 36px;
-         }
          
       }
+
       .image-container{
          width: 47%;
       
          img{
             width: 80%;
-            // height: 450px;
          }
       }
-
-      .subject-terms{
-         font-size: 14px;
-      }
-      
    }
 
    &.fifth-section {
@@ -174,34 +171,55 @@ section {
    
       .section-info {
          width: 45%;
-   
-         h2 {
-            font-size: 36px;
-         }
-         
       }
+
       .image-container{
          width: 47%;
       
          img{
             width: 80%;
-            // height: 450px;
+         }
+      }     
+   }
+
+   &.sixth-section {
+      background-color: #fff;
+      position: relative;
+   
+      .section-info {
+         width: 45%;
+      }
+
+      .image-container{
+         width: 47%;
+      
+         img{
+            width: 80%;
          }
       }     
    }
    
-   &.sixth-section {
+   &.last-section {
       background-color: #F4F4FA;
-      box-shadow: 0px 10px 30px 20px rgba(0, 0, 0, 0.089);
+      box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.089);
       position: relative;
-      img {
+
+      img.lyft-business {
          height: 26px;
          width: 150px;
       }
-      
-      h2 {
-         font-size: 36px;
+
+      .section-info {
+         width: 45%;
       }
+
+      .image-container{
+         width: 47%;
+      
+         img{
+            width: 80%;
+         }
+      }  
    
       p {
          max-width: 750px;
@@ -216,8 +234,7 @@ footer {
    background: #FFF;
 
    .footer-container {
-      width: 1440px;
-      padding: 0px 100px;
+      width: 1200px;
 
       ul {
          width: calc(100% / 4);

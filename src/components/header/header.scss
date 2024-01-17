@@ -3,22 +3,94 @@ header {
    height: 80px;
 
    .header-container {
-      padding: 0px 70px;
-      width: 1440px;
-
+      width: 1200px;
       
       .main-nav{
-         padding: 0px 20px;
          width: 65%;
+
+         .links-container{
+            gap: 30px;
+
+            .nav-links{
+               color: #000;
+               text-decoration: none;
+               white-space: nowrap;
+               font-weight: 700;
+
+               &:hover{
+                  color: #523be4;
+               }
+            }
+
+            .sub-links-container {
+               gap: 35px;
+
+               a {
+                  text-decoration: none;
+               }
+
+               &.margin-right {
+                  width: 560px;
+               }
+            }
+      
+            // .sub-links {
+               
+            // }
+           
+            
+         }
+         
+
       }
    
-      .nav-links{
-        color: #000;
-        text-decoration: none;
+
+      
+      
+      @media(max-width: 1100px){
+          .nav-links-container{
+              width: 75%;
+          }
       }
       
-      .nav-links:hover{
-        color: #523be4;
+      @media(max-width: 1024px){
+          .nav-links-sub-con{
+              display: none;
+          }
+          .nav-links-container{
+              width: 30%;
+          }
+      
+          .mobile-menu{
+              display: inline-block;
+              font-size: 30px;
+          }
+      
+      }
+      
+      @media(max-width: 730px){
+          .nav-links-container{
+              width: 30%;
+          }
+      }
+      
+      @media(max-width: 610px){
+          .nav-links-container{
+              width: 35%;
+          }
+          .lyft-logo{
+              font-size: 20px;
+          }
+      }
+      @media(max-width: 510px){
+          .nav-links-container{
+              width: 50%;
+          }
+      }
+      @media(max-width: 389px){
+          .nav-links-container{
+              width: 60%;
+          }
       }
    }
    
