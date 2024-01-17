@@ -126,12 +126,8 @@ const Rider = () => {
                            </p>
                         </ul>
                         <div className='d-flex gap-3'>
-                           <div className=''>
-                              <p className="fw-semibold">See our safety feature</p>
-                           </div>
-                           <div>
-                              <i className='fa-solid fa-arrow-right'></i> 
-                           </div>
+                           <p className="fw-semibold">See our safety feature</p>
+                           <i className='fa-solid fa-arrow-right'></i>
                         </div>
                      </div>
 
@@ -158,12 +154,8 @@ const Rider = () => {
                            </p>
                         </ul>
                         <div className='d-flex gap-3'>
-                           <div className=''>
-                              <p className="fw-semibold">Learn about Trip Up</p>
-                           </div>
-                           <div>
-                              <i className='fa-solid fa-arrow-right'></i> 
-                           </div>
+                           <p className="fw-semibold">Learn about Trip Up</p>
+                           <i className='fa-solid fa-arrow-right'></i>
                         </div>
                      </div>
                   </div>

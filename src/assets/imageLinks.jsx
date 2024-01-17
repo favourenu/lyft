@@ -6,7 +6,7 @@ const homeImage5 = "https://images.ctfassets.net/q8mvene1wzq4/3tEhujwTqY4G4LXZ0y
 const homeImage6 = "https://images.ctfassets.net/q8mvene1wzq4/4sWP94iWODBwQzOY6rFn0N/f34033d586a917eb2dc63209cb23d955/20210717_Lyft_HealthClinic_V4.jpg?w=1500&q=60&fm=webp"
 const homeImage7 = "https://images.ctfassets.net/q8mvene1wzq4/3WkSLIffcV7OYpUgMpBwJ7/6951147bed1e0844f7eeeb9785cf84ba/Lyft_Business_Pink.svg?w=&q=60&fm="
 const driverImage1 = "https://images.ctfassets.net/q8mvene1wzq4/2U9CYHaJUPoUS5s00qjNh8/a7626e178402e61484b777918e1407b3/dvr_hero_pp_V2.jpg?w=2500&q=60&fm=webp"
-const driverImage2 = "https://images.ctfassets.net/q8mvene1wzq4/10jbxXRvdFq7vRaOzXWNyi/658563332042fe4e5ec83634306d376a/rider_pinkpaint_schedule_V2.jpg?w=1500&q=60&fm=webp"
+const driverImage2 = "https://images.ctfassets.net/q8mvene1wzq4/5Zfeee22Bn598fKC5AIBHa/08218240dd542e6153faf2ed91964f28/0413_HOSPITAL_4677-V02_1.jpg?w=1500&q=60&fm="
 const driverImage3 = "https://images.ctfassets.net/q8mvene1wzq4/10jbxXRvdFq7vRaOzXWNyi/658563332042fe4e5ec83634306d376a/rider_pinkpaint_schedule_V2.jpg?w=1500&q=60&fm=webp"
 const driverImage4 = "https://images.ctfassets.net/q8mvene1wzq4/10jbxXRvdFq7vRaOzXWNyi/658563332042fe4e5ec83634306d376a/rider_pinkpaint_schedule_V2.jpg?w=1500&q=60&fm=webp"
 const driverImage5 = "https://images.ctfassets.net/q8mvene1wzq4/10jbxXRvdFq7vRaOzXWNyi/658563332042fe4e5ec83634306d376a/rider_pinkpaint_schedule_V2.jpg?w=1500&q=60&fm=webp"

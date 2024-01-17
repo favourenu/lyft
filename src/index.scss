@@ -6,6 +6,7 @@
 }
 
 body {
+   color: #0C0B31;
 
    h1, h2, h3, h4, h5, h6, p {
       margin: 0;
@@ -22,11 +23,21 @@ body {
    }
 
    a {
-      color: #000;
+      color: #0C0B31;
    }
 
    li {
       list-style: none;
+   }
+   input {
+      outline: none;
+      padding: 16px;
+      border: 1px solid #bdbdbd;
+      border-radius: 16px;
+
+      &::placeholder {
+         color: #bdbdbd;
+      }
    }
 }
 
