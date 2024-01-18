@@ -63,11 +63,11 @@
 /*  */
 
 section {
-   padding: 64px 80px;
+   padding: 70px 80px;
 
    .section-container {
       width: 1200px;
-      padding: 0px 50px;
+      padding: 0px 60px;
    }
 
    .hero {
@@ -110,14 +110,6 @@ section {
    
       .section-info {
          width: 45%;
-      }
-
-      .rider-image-container {
-         width: 57%;
-
-         img {
-            width: 85%;
-         }
       }
 
       .image-container{
@@ -228,12 +220,13 @@ section {
    
 
 footer {
-   padding: 40px 0px;
+   padding: 40px 80px;
    padding-bottom: 50px;
    background: #FFF;
 
    .footer-container {
       width: 1200px;
+      padding: 0px 60px;
 
       ul {
          width: calc(100% / 4);

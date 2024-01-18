@@ -12,8 +12,8 @@ function App() {
                path='/' 
                element={<HomePage /> }
             />
-            <Route path='driver' element={<DriverRoute /> } />
-            <Route path='rider' element={<RiderRoute /> } />
+            <Route path='driver/*' element={<DriverRoute /> } />
+            <Route path='rider/*' element={<RiderRoute /> } />
          </Routes>
       </div>
    )

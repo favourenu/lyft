@@ -1,0 +1,35 @@
+.driver {
+
+
+   .second-section {
+      .image-container {
+         img {
+            width: 78%; 
+            height: 260px;
+         }
+      }
+   }
+
+   .third-section {
+      .section-container {
+         gap: 100px;
+
+         .phone-image {
+            padding: 0px 80px;
+            height: 600px
+         }
+      }
+   }
+
+   .fourth-section {
+      .image-container {
+         img {
+            width: 93%;
+         }
+      }
+   }
+
+   .last-section {
+      background-color: #d1ffee;
+   }
+}

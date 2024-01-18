@@ -1,4 +1,5 @@
 // import React from 'react'
+import './rider.scss'
 import Header from "../../components/header/header"
 import Footer from "../../components/footer/footer"
 import CustomButton from "../../components/customButton/customButton"
@@ -9,9 +10,8 @@ import { Link } from "react-router-dom"
 const Rider = () => {
    const riderImages = imageLinks.rider;
 
-
    return (
-      <div>
+      <div className='rider'>
          <Header 
             isRider
          />

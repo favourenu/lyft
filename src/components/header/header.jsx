@@ -4,7 +4,7 @@ import CustomButton from '../customButton/customButton'
 import Line from '../line'
 import { Link } from 'react-router-dom'
 
-const Header = ({isHome, isDriver, isRider}) => {
+const Header = ({isHome, isDriver, isEarning, isCities, isRider}) => {
    return (
       <header className='w-100 d-flex justify-content-center'>
          <div className='header-container d-flex justify-content-between align-items-center gap-5'>
@@ -36,9 +36,15 @@ const Header = ({isHome, isDriver, isRider}) => {
                         isDriver ? (
                            <div className='sub-links-container d-flex align-items-center h-100 w-100'>
                               <Link className='nav-links' to='/driver' >DRIVER</Link>
-                              <Link className='sub-links'>Earnings</Link>
-                              <Link className='sub-links'>Cities</Link>
-                              <Link className='sub-links'>Help</Link>
+                              <Link className={`sub-links ${isEarning ? 'active-sub-link' : ''}`} to={'/driver/pay'}>Earnings</Link>
+                              <Link className={`sub-links ${isCities ? 'active-sub-link' : ''}`} to={'/driver/cities'}>Cities</Link>
+                              <Link className='sub-links' to={''}>Help</Link>
+
+                              {
+                                 isEarning && (
+                                    <CustomButton isPurpleBtn>Become a driver</CustomButton>
+                                 )
+                              }
                            </div>
                         ) : (
                            <Link className='nav-links' to='/driver' >DRIVER</Link>
@@ -49,7 +55,7 @@ const Header = ({isHome, isDriver, isRider}) => {
                         isRider ? (
                            <div className='sub-links-container margin-right d-flex align-items-center h-100'>
                               <Link className='nav-links' to='/rider'>RIDER</Link>
-                              <Link className='sub-links'>Cities</Link>
+                              <Link className={`sub-links ${isCities ? 'active-sub-link' : ''}`} to={'/rider/cities'}>Cities</Link>
                               <Link className='sub-links'>For Business</Link>
                               <Link className='sub-links'>Help</Link>
 
