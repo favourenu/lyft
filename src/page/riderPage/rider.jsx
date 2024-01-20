@@ -180,7 +180,6 @@ const Rider = () => {
                </div>
             </section>
          </main>
-      
 
          <Footer />
       </div>

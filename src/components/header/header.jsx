@@ -3,12 +3,15 @@ import './header.scss'
 import CustomButton from '../customButton/customButton'
 import Line from '../line'
 import { Link } from 'react-router-dom'
+import ProfileIcon from '../../assets/business-profile-icon.png'
 
-const Header = ({isHome, isDriver, isEarning, isCities, isRider}) => {
+const Header = ({isHome, isDriver, isEarning, isCities, isBusiness, isRider}) => {
    return (
       <header className='w-100 d-flex justify-content-center'>
          <div className='header-container d-flex justify-content-between align-items-center gap-5'>
-            <span className="lyft-logo fs-1 fw-bold">Trip</span> 
+            <span className=" w-100 lyft-logo fs-1 fw-bold">
+               Trip {isBusiness && "business"}
+            </span> 
 
             <nav 
                className={`
@@ -53,10 +56,10 @@ const Header = ({isHome, isDriver, isEarning, isCities, isRider}) => {
                      <Line/>
                      {
                         isRider ? (
-                           <div className='sub-links-container margin-right d-flex align-items-center h-100'>
+                           <div className={`sub-links-container ${isBusiness ? 'business-width' : 'link-width'}  d-flex align-items-center h-100`}>
                               <Link className='nav-links' to='/rider'>RIDER</Link>
                               <Link className={`sub-links ${isCities ? 'active-sub-link' : ''}`} to={'/rider/cities'}>Cities</Link>
-                              <Link className='sub-links'>For Business</Link>
+                              <Link className={`sub-links ${isBusiness ? 'active-sub-link' : ''}`} to={'/rider/business'}>For Business</Link>
                               <Link className='sub-links'>Help</Link>
 
                               <CustomButton isPurpleBtn>Get a ride</CustomButton>
@@ -68,9 +71,22 @@ const Header = ({isHome, isDriver, isEarning, isCities, isRider}) => {
                      <Line/>
                      <Link className='nav-links' to='/business'>BUSINESS</Link>
                      <Line/>
-                     <Link className='nav-links' to='/login'>LOG IN</Link>
-                     <Line/>
-                     <Link className='nav-links' to='/signup'>SIGN UP</Link>
+                     {
+                        isBusiness ? (
+                           <>
+                              <Link className='nav-links' to=''>
+                                 <img width='32' height='32' src={ProfileIcon} />
+                              </Link>
+                           </>
+                        ) : (
+                           <>
+                              <Link className='nav-links' to='/login'>LOG IN</Link>
+                              <Line/>
+                              <Link className='nav-links' to='/signup'>SIGN UP</Link>
+                           </>
+                        )
+                     }
+                     
                   </div>
                </div>
             </nav>
