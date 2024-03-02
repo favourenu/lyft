@@ -1,9 +1,11 @@
 header {
    border-bottom: 1px solid #D8D8DE;
    height: 80px;
+   padding: 0px 80px;
 
    .header-container {
-      width: 1200px;
+      max-width: 1200px;
+      width: 100%;
       
       .main-nav{
          width: 65%;
@@ -54,59 +56,12 @@ header {
            
             
          }
-         
-
-      }
-   
-
-      
-      
-      @media(max-width: 1100px){
-          .nav-links-container{
-              width: 75%;
-          }
       }
       
-      @media(max-width: 1024px){
-          .nav-links-sub-con{
-              display: none;
-          }
-          .nav-links-container{
-              width: 30%;
-          }
-      
-          .mobile-menu{
-              display: inline-block;
-              font-size: 30px;
-          }
-      
-      }
-      
-      @media(max-width: 730px){
-          .nav-links-container{
-              width: 30%;
-          }
-      }
-      
-      @media(max-width: 610px){
-          .nav-links-container{
-              width: 35%;
-          }
-          .lyft-logo{
-              font-size: 20px;
-          }
-      }
-      @media(max-width: 510px){
-          .nav-links-container{
-              width: 50%;
-          }
-      }
-      @media(max-width: 389px){
-          .nav-links-container{
-              width: 60%;
-          }
-      }
    }
    
+   @media screen and (max-width: 1024px){
+      padding: 0px 25px;
+   }      
 }
 

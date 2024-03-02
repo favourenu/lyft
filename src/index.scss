@@ -45,12 +45,13 @@ body {
          color: #bdbdbd;
       }
    }
+   
+   // @media(max-width: 1024px){
+   //    body{
+   //       position: relative;
+   //       height: 100vh;
+   //    }
+   // }
 }
 
-@media(max-width: 1024px){
-   body{
-      position: relative;
-      height: 100vh;
-   }
-}
 

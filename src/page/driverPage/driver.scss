@@ -8,6 +8,32 @@
             height: 260px;
          }
       }
+
+      @media screen and (max-width: 1024px) {
+         
+         .section-info {
+            h2 {
+               text-align: start;
+            }
+         }
+         .image-container {
+            width: 50%;
+            img {
+               width: 100%;
+            }
+         }
+
+      }
+
+      @media screen and (max-width: 768px) {
+         .image-container {
+            width: 100%;
+            img {
+               width: 100%;
+               height: unset;
+            }
+         }
+      }
    }
 
    .third-section {
@@ -31,5 +57,14 @@
 
    .last-section {
       background-color: #d1ffee;
+   }
+
+
+   @media screen and (max-width: 1024px) {
+      .first-section {
+         input[type="phone"] {
+            width: 320px;
+         }
+      }
    }
 }

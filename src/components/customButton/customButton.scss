@@ -2,7 +2,7 @@
    border: none;
    padding: 0px 24px;
    cursor: pointer;
-   min-height: 48px;
+   height: 48px;
    min-width: 120px;
    border-radius: 48px; 
    
@@ -32,42 +32,15 @@
       color: #000;
       width: 130px;
    }
+   
+   // @media screen and (max-width: 1024px){
+      
+   //    .purple-btn{
+         
+   //    }
+   // }
 }
 
 
 
 
-
-@media(max-width: 1024px){
-   .purple-btn{
-      font-size: 15px;
-      padding: 17px 28px;
-      width: 135px;
-   }
-
-}
-
-@media(max-width: 510px){
-   .purple-btn{
-      font-size: 14px;
-      padding: 15px 24px;
-      width: 125px;
-   }
-}
-
-@media(max-width: 1024px){
-   .white-btn{
-      font-size: 16px;
-      padding: 17px 28px;
-      width: 135px;
-   }
-
-}
-
-@media(max-width: 510px){
-   .white-btn{
-      font-size: 14px;
-      padding: 15px 24px;
-      width: 125px;
-   }
-}

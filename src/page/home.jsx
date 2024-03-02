@@ -7,20 +7,28 @@ import Footer from "../components/footer/footer"
 import CustomButton from "../components/customButton/customButton"
 import { Link } from "react-router-dom"
 import { imageLinks } from "../assets/imageLinks"
+import useWindowWidth from "../components/hooks/useWindowWidth"
 
 
 const HomePage = () => {
    const homeImages = imageLinks.home
+   const windowWidth = useWindowWidth()
+   const mobileView = windowWidth <= 1024;
+
+
+   const img8 = "https://images.ctfassets.net/q8mvene1wzq4/2seUPlIdhymHhttrnTTzLZ/1626af3cfc004731c56f66026efc1b5b/Driver_Homepage_Mobile.jpg?w=1500&q=60&fm="
+   const img9 = "https://images.ctfassets.net/q8mvene1wzq4/5ismMaum6dR6aIhxe3c7Ge/748a1be576df8a273600645fbe451e10/Lyft-Pink-Mobile-V5.jpg?w=1500&q=60&fm="
 
    return(
       <div className=''>
          <Header 
             isHome
+            isMobileView={mobileView}
          />
 
          <main className='d-flex flex-column'>
-            <section className="first-section d-flex justify-content-center">
-               <div className='first-section-container d-flex align-self-center justify-content-center  gap-4'>
+            <section className={`first-section d-flex ${mobileView ? 'flex-column-reverse' : 'justify-content-center'} `}>
+               <div className={`first-section-container d-flex ${mobileView ? 'align-items-center flex-column-reverse gap-5' : 'align-self-center justify-content-center gap-4'}  `}>
                   <div className="first-section-img">
                      <img src={homeImages.img1} className='w-100' alt="A trip ride" />
                   </div>
@@ -35,8 +43,8 @@ const HomePage = () => {
             </section>
 
             <section className="second-section d-flex justify-content-center">
-               <div className='section-container d-flex flex-column align-self-center justify-content-center gap-5'>
-                  <div className="d-flex justify-content-center gap-4">
+               <div className={`section-container d-flex flex-column align-self-center justify-content-center gap-5`}>
+                  <div className={`d-flex ${mobileView ? 'justify-content-between reverse' : 'justify-content-center'}  gap-4`}>
                      <div className="section-info d-flex flex-column gap-3">
                         <span className='fs-6 fw-semibold'>DRIVE WITH TRIP</span>
                         <ul className='d-flex flex-column gap-4'>
@@ -46,30 +54,33 @@ const HomePage = () => {
                               h4text="Reliable earnings: "
                               para="Make money,keep you tips, and cash out when you want."
                            />
-
                            <InfoList 
                               iconClass="fa-regular fa-clock"
                               h4text="A flexible schedule: "
                               para="Be your own boss and drive whenever it works for you."
                            />
-
                            <InfoList 
                               iconClass="fa-solid fa-bolt"
                               h4text="Get paid instantly: "
                               para="Cash out your earnings whenever you want."
                            />
-
                         </ul>
-
                         <InfoButton 
                            btnText="Apply to drive"
                            paraText="How driver pay works"
                            iconClass="fa-solid fa-arrow-right"
+                           isMobileView={mobileView}
                         />
-
                      </div>
-                     <div className="image-container d-flex align-items-end justify-content-end">
-                        <img src={homeImages.img2} alt="" />
+                     <div className={`image-container ${mobileView ? '' : 'd-flex align-items-end justify-content-end'}`}>
+                        {
+                           mobileView ? (
+                              <img className="" src={img8} alt="" />
+                           ) : (
+                              <img src={homeImages.img2} alt="" />
+                           )
+                        }
+                        
                      </div>
                   </div>
                   <Carousel/>
@@ -77,8 +88,8 @@ const HomePage = () => {
             </section>
 
             <section className="third-section d-flex justify-content-center">
-               <div className='section-container d-flex flex-column align-self-center'>
-                  <div className="d-flex justify-content-center gap-4">
+               <div className={`section-container d-flex flex-column align-self-center ${mobileView ? 'gap-5' : ''}`}>
+                  <div className={`d-flex ${mobileView ? 'justify-content-between reverse' : 'justify-content-center'} gap-4`}>
                      <div className="section-info d-flex flex-column gap-3">
                         <span className='fs-6 fw-semibold'>RIDE WITH TRIP</span>
                         <ul className='d-flex flex-column gap-4'>
@@ -107,16 +118,23 @@ const HomePage = () => {
                            btnText="Get a ride"
                            paraText="learn more about riding with lyft"
                            iconClass="fa-solid fa-arrow-right"
+                           isMobileView={mobileView}
                         />
                      </div>
-                     <div className="image-container d-flex align-items-end justify-content-end">
+                     <div className={`image-container d-flex ${mobileView ? 'align-items-start' : 'align-items-end justify-content-end'}`}>
                         <img src={homeImages.img3} alt="" />
                      </div>
                   </div>
 
-                  <div className="d-flex justify-content-center gap-4">
+                  <div className={`d-flex ${mobileView ? 'justify-content-between direction-column' : 'justify-content-center'}  gap-4`}>
                      <div className="image-container d-flex align-items-start justify-content-start">
-                        <img src={homeImages.img4} alt="" />
+                        {
+                           mobileView ? (
+                              <img className="mt-3" src={img9} alt="" />
+                           ) : (
+                              <img src={homeImages.img4} alt="" />
+                           )
+                        }
                      </div>
 
                      <div className="section-info d-flex flex-column gap-5">
@@ -149,7 +167,7 @@ const HomePage = () => {
                            />
                         </ul>
                         <div className='d-flex flex-column gap-3'>
-                           <div className='w-50'>
+                           <div className={`${mobileView ? 'w-75' : 'w-50'}`}>
                               <CustomButton isPurpleBtn>Get your 1st month free</CustomButton>
                            </div>
                            <span className='subject-terms'>
@@ -172,8 +190,8 @@ const HomePage = () => {
             </section>
 
             <section className="fourth-section d-flex justify-content-center">
-               <div className='section-container d-flex justify-content-center gap-4'>
-                  <div className="image-container d-flex align-items-center justify-content-start">
+               <div className={`section-container d-flex ${mobileView ? 'justify-content-between direction-column' : 'justify-content-center gap-4'}`}>
+                  <div className={`image-container d-flex ${mobileView ? 'align-items-start' : 'align-items-center justify-content-start'} `}>
                      <img src={homeImages.img5} alt="" />
                   </div>
 
@@ -187,13 +205,14 @@ const HomePage = () => {
                         btnText="Learn about safety"
                         paraText="Community guidelines"
                         iconClass="fa-solid fa-arrow-right fw-semi-bold"
+                        isMobileView={mobileView}
                      />
                   </div>
                </div>
             </section>
 
             <section className="fifth-section d-flex justify-content-center">
-               <div className='section-container d-flex justify-content-center gap-4'>
+               <div className={`section-container d-flex ${mobileView ? 'justify-content-between reverse' : 'justify-content-center gap-4'}`}>
                   <div className="section-info d-flex flex-column gap-3">
                      <ul className='d-flex flex-column gap-4'>
                         <h2 className="fw-medium">Making millions of rides more accessible</h2>
@@ -211,7 +230,7 @@ const HomePage = () => {
                      </div>
                   </div>
 
-                  <div className="image-container d-flex align-items-end justify-content-end">
+                  <div className={`image-container d-flex ${mobileView ? 'align-items-start' : 'align-items-end justify-content-end'}`}>
                      <img src={homeImages.img6} alt="" />
                   </div>
                </div>
@@ -221,7 +240,7 @@ const HomePage = () => {
                <div className='section-container align-self-center d-flex flex-column justify-content-center align-items-center gap-3'>
                   <img className='lyft-business' src={homeImages.img7} />
 
-                  <h2 className='d-flex flex-column align-items-center gap-3'>
+                  <h2 className='d-flex flex-column align-items-center gap-2'>
                      We help move
                      <span>business</span>
                   </h2>
@@ -236,7 +255,9 @@ const HomePage = () => {
             </section>
          </main>
 
-         <Footer />
+         <Footer 
+            isMobileView={mobileView}
+         />
       </div>
    )
 }
